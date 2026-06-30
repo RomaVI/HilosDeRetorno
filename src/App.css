@@ -142,7 +142,6 @@
   width: 100vw;
   height: 200vh;
 
-  background-color: red;
 
   .block1 {
     background-color: #eeeeee;
@@ -204,6 +203,13 @@
   .block2 {
     background-color: #ffffff;
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+    .block2Struct{
+      background-color: red;
+      height: 70%;
+      width: 80vw;
+    }
   }
   .struct {
     width: 100vw;
