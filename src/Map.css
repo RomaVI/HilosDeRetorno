@@ -1,0 +1,136 @@
+.map-default-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  .element.style{
+    width: 25vh;
+  }
+}
+
+.map-loader-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.map-loader-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background: #4f46e5;
+  animation: map-bounce 0.75s infinite ease-in-out;
+}
+
+.map-loader-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.map-loader-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes map-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-0.35rem);
+    opacity: 1;
+  }
+}
+
+.demo-map-shell {
+  height: 420px;
+  width: 100%;
+  max-width: 1024px;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.08);
+}
+
+.map-popup {
+  background: white;
+  color: black;
+  min-width: 150px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 0.75rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.map-popup-card {
+  min-width: 150px;
+}
+
+.map-popup-title {
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+}
+
+.map-popup-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.default-marker-icon {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  border: 2px solid white;
+  background: #3b82f6;
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.25);
+}
+
+.control-group {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.control-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.control-button:hover {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+.map-controls {
+  position: absolute;
+  z-index: 10;
+}
+
+.marker-popup-content,
+.marker-tooltip-content {
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.marker-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111827;
+}
