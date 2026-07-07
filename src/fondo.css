@@ -1,0 +1,25 @@
+.shader-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shader-background > div,
+.shader-background canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.home-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.shader-background.is-inline {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}

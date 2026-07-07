@@ -1,0 +1,165 @@
+#block {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .block1 {
+        background-color: #eeeeee;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+
+        .block-struct {
+            width: 80vw;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .txtBlock1 {
+            height: 100%;
+            width: 45vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                font-size: 2.5rem;
+                margin-top: 3rem;
+                margin-left: 3rem;
+                margin-right: 5rem;
+                margin-bottom: 2rem;
+                text-align: -webkit-match-parent;
+                color: #000;
+                letter-spacing: 2px;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 0.8rem;
+                margin-left: 3rem;
+                margin-right: 3rem;
+                margin-bottom: 3rem;
+                color: #000;
+            }
+        }
+
+        .imgBlock1 {
+            width: 35vw;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+
+    .block2 {
+        background-color: #ffffff;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            width: 100%;
+            height: 10%;
+            text-align: center;
+            font-size: 2rem;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            color: #000;
+        }
+
+        .block2Struct {
+            border-radius: 10px;
+            height: 70vh;
+            width: 95vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 5rem;
+
+            .b2item1,
+            .b2item2,
+            .b2item3 {
+                position: relative;
+                width: calc(90vw / 3);
+                height: 70vh;
+                overflow: hidden;
+                border-radius: 10px;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .itemText {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 1.5rem;
+                    background: transparent;
+                    color: white;
+                    z-index: 2;
+                    pointer-events: none;
+
+                    p {
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        margin: 0;
+                        height: 40%;
+                        width: 100%;
+                        background-color: #00000088;
+                    }
+
+                    h4 {
+                        margin-bottom: 0.5rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .block3 {
+        height: 100vh;
+        background-color: aqua;
+    }
+
+    .struct {
+        gap: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.layer-markers-demo-section {
+  padding: 3rem 0;
+  background: #f8fafc;
+}
