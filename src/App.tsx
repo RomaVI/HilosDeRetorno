@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react'
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
+
+const getBasePath = () => {
+  if (typeof window === 'undefined') return '/'
+  const path = window.location.pathname
+  const repoPrefix = '/HilosDeRetorno'
+  return path.startsWith(repoPrefix) ? repoPrefix : '/'
+}
 import './App.css'
 import logo from './assets/logo13.jpg'
 import Home from './pages/home'
@@ -79,12 +86,12 @@ function AppContent() {
 }
 
 function App() {
+  const basename = getBasePath()
+
   return (
-    <HashRouter>
+    <HashRouter basename={basename}>
       <AppContent />
     </HashRouter>
-
-
   )
 }
 
